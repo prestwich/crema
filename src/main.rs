@@ -2,7 +2,6 @@ use tokio;
 // use tokio::sync::RwLock;
 
 mod comp;
-mod rand;
 mod rpc;
 
 const ROUNDS: u32 = 100;
@@ -32,6 +31,7 @@ async fn main() {
     dbg!(rpc::run_precompile(4, &[1, 2, 3, 4]).await.unwrap());
 
     for _ in 0..ROUNDS {
+    // loop {
         fuzz_round().await;
     }
 }
