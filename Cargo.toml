@@ -1,0 +1,17 @@
+[package]
+name = "crema"
+version = "0.1.0"
+authors = ["James Prestwich <prestwich@clabs.co>"]
+edition = "2018"
+
+
+[dependencies]
+
+hex = "0.4.2"
+lazy_static = "1.4.0"
+tokio = {version = "0.2.22", features = ["sync", "rt-threaded", "macros"]}
+rand = "0.7.3"
+rand_xorshift = "0.2"
+
+ethers = { git = "https://github.com/gakonst/ethers-rs" }
+eth_pairings = { git = "https://github.com/prestwich/eip1962", branch = "prestwich/randgen", features = ["randgen"] }
